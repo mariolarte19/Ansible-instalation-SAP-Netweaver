@@ -113,10 +113,9 @@ ansible_password=XXXX
 #### B).Aplicar playbook.
 Desde la consola de comandos nos dirigimos a la carpeta donde esta el playbook sh_install.yml y ejecutamos el siguiente comando `mnsible-playbook sh_install.yml` una vez terminado configura el sistema Operativo (OS) SUSE SLES for SAP Business Applications 15.0 e instala Instala SAP NETWEAVER.😃✔️
 #### C). Verificacion.
-Podemos verificar que SAP HANA quedo instalado exitosamente iniciando la base de datos con los siguientes comandos:
-* `su - <SID>adm`
-* `HDB start`
-* `HDB stop`
+Podemos verificar que SAP netweaver quedo instalado exitosamente iniciando SAP Logon el cual podemos descargar el instalador[aqui](https://launchpad.support.sap.com y verificar de la siguiente manera.
+![arquitectura](https://github.com/mariolarte19/Ansible-instalation-SAP-Netweaver/blob/master/SAP%20netarquitectura.png)
+
 
 Para mas informacion sobre gestión del sistema SAP HANA después de la instalación [aqui](https://launchpad.support.sap.com/#/softwarecenter) .
 ##  Construido con 🛠️
