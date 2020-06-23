@@ -1,4 +1,4 @@
-# Automating SAP HANA installation with Ansible on IBM IaaS
+# Automating SAP netweaver installation with Ansible on IBM IaaS
 <p align="center">
 <img width="500" alt="img8" src="Parnership.jpg">
 </p>
