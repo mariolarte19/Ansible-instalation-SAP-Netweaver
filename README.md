@@ -48,17 +48,15 @@ Nota: Si está instalando en un sistema con 16 GB de RAM, aumente la cantidad de
 ---
 
 ### 3.Como obtener el instalador de SAP HANA Express Edition
-Vaya a la página de [registro-Descargar](https://www.sap.com/cmp/td/sap-hana-express-edition.html) y haga clic en Registrarse para obtener su versión gratuita.
-##### B).Elige un administrador de descargas.
-Haga clic en el administrador de descargas que coincida con su sistema: Linux DM o Windows DM.
-##### C).Elige un administrador de descargas.
-Guarde el archivo del administrador de descargas en su computadora portátil y ábralo. Si su sistema muestra una advertencia de seguridad cuando abre el archivo, ignore la advertencia.
+Vaya a la página de [registro-Descargar](https://developers.sap.com/trials-downloads.html?search=SAP%20NetWeaver%20AS%20ABAP%20Developer%20Edition%20SP02%207.50) y haga clic en Registrarse para obtener su versión gratuita.
+##### A).Elige el instalador.
+Busque los intaladores SAP NetWeaver AS ABAP Developer Edition 7.52 SP04 el cual consta de 11 partes.
 
 ---
 
 ### 4.Descripción de Tareas-Playbook. 📋
 
-#### 4.1 Instalar grupo de paquetes sap-hana.
+#### 4.1 Instalar grupo de paquetes sap-tune.
 En esta tarea se instala paquetes tales como: 
 * sysstat para recopilar datos sar.
 * tuned para el ajuste del sistema.
@@ -70,48 +68,30 @@ En esta tarea se instala paquetes tales como:
 Utilizando saptune, se puede ajustar el sistema para SAP NetWeaver, SAP HANA / SAP Business Objects y aplicaciones SAP S / 4HANA.
 En esta tarea se configurar saptune con una solución preconfigurada la cual es HANA.Dicha solucion aplica las siguientes notas. 
 
- * 2382421: Optimizar Configuración de red a nivel HANA y OS.
+ * 2382421: Optimizar Configuración de red a nivel Netweaver y OS.
             Version 36 from 16.01.2020
  * 2534844: Bloqueo del Indexserver durante el inicio debido a un segmento de memoria compartida insuficiente.
             Version 12 from 15.11.2017
  * 2578899: SUSE LINUX Enterprise Server 15: Notas de instalación.
             Version 20 from 29.11.2019
- * 2684254: SAP HANA DB: Configuración recomendada del sistema operativo para SLES 15 / SLES para aplicaciones SAP.
-            Version 5 from 03.01.2019
- * 941735: Sistema de gestión de memoria SAP para sistemas Linux de 64 bits.
-           Version 11 from 04.05.2018
- * 1980196:Configuración del parámetro del núcleo de Linux /proc/sys/vm/max_map_count en SAP HANA Systems.
- * 1771258: Linux: Límites de recursos de usuario y sistema.
-            Version 5 from 18.06.2018
-  
 
 #### 4.4 Saptune daemon start.
 En esta tarea se inicia saptune y se habilita en el arranque.
 #### 4.5 Crear directorio.
-Se crea un directorio en /home/saphana , con el fin de alojar el instalador de SAP HANA EXPRESS 2.0.
+Se crea un directorio en /home/sapnetweaver , con el fin de alojar el instalador de SAP NetWeaver AS ABAP Developer Edition 7.52 SP04.
 #### 4.6 Gestor de descargas.
 En esta tarea se hacen varios procesos como:
 * Eligir como directorio de trabajo /home/saphana.
 * Direccionarse al gestor de descargas.
 * Descargar el instalador independiente de la plataforma (HXEDownloadManager.jar).
 
-#### 4.7 Descargar instalador de sap hana.
-Se descarga HANA EXPRESS 2.0.
+#### 4.7 Descargar instalador de SAP NetWeaver AS ABAP Developer Edition 7.52 SP04.
+Se descarga SAP NetWeaver AS ABAP Developer Edition 7.52 SP04 desdeek Object storage donde estan alojados los instaladores.
 #### 4.8 Descomprimir instalador.
-Se decomprime el instaldor de HANA Express obteniendo hxe.tgz , setup_hxe.sh y HANA_EXPRESS_20.
-#### 4.9 Procesar la plantilla de archivo de configuración de HANA.
-Se establece la configuracion en el archivo  /home/saphana/HANA_EXPRESS_20/DATA_UNITS/HDB_SERVER_LINUX_X86_64/configfile.cfg con los siguientes parametros.
+Se decomprime el instaldor de SAP Netweaver TD752SP04part01.rar obteniendo install.sh ,client,server
+img, readme.html y SAP_COMMUNITY_DEVELOPER_License. 
 
-<pre><code>
-sid=HXE
-master_password=Passw0rd
-use_master_password=Passw0rd
-password=Passw0rd
-sapadm_password=Passw0rd
-system_user_password=Passw0rd
-</pre></code>
-
-#### 4.10 Instalar SAP NETWEAVER.
+#### 4.9 Instalar SAP NETWEAVER.
 Instala SAP NETWEAVER. 😃✔️
 
 ---
@@ -131,14 +111,14 @@ ansible_password=XXXX
   become: yes ......
 </pre></code>
 #### B).Aplicar playbook.
-Desde la consola de comandos nos dirigimos a la carpeta donde esta el playbook sh_install.yml y ejecutamos el siguiente comando `mnsible-playbook sh_install.yml` una vez terminado configura el sistema Operativo (OS) SUSE SLES for SAP Business Applications 15.0 e instala SAP HANA EXPRESS.😃✔️
+Desde la consola de comandos nos dirigimos a la carpeta donde esta el playbook sh_install.yml y ejecutamos el siguiente comando `mnsible-playbook sh_install.yml` una vez terminado configura el sistema Operativo (OS) SUSE SLES for SAP Business Applications 15.0 e instala Instala SAP NETWEAVER.😃✔️
 #### C). Verificacion.
 Podemos verificar que SAP HANA quedo instalado exitosamente iniciando la base de datos con los siguientes comandos:
 * `su - <SID>adm`
 * `HDB start`
 * `HDB stop`
 
-Para mas informacion sobre gestión del sistema SAP HANA después de la instalación [aqui](https://help.sap.com/viewer/2c1988d620e04368aa4103bf26f17727/2.0.00/en-US/cbdb1298bb5710148fd6e6fb71038ba2.html) .
+Para mas informacion sobre gestión del sistema SAP HANA después de la instalación [aqui](https://launchpad.support.sap.com/#/softwarecenter) .
 ##  Construido con 🛠️
 IBM Cloud, Ansible.
 
