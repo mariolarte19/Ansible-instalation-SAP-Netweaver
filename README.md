@@ -43,7 +43,7 @@ Nota: Si está instalando en un sistema con 16 GB de RAM, aumente la cantidad de
 * Instalar [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
 ## Arquitectura
-![arquitectura](https://github.com/mariolarte19/Anisble-SAP-HANA/blob/master/SAPHANA.png)
+![arquitectura](https://github.com/mariolarte19/Ansible-instalation-SAP-Netweaver/blob/master/SAP%20netarquitectura.png)
 
 ---
 
