@@ -122,8 +122,9 @@ Podemos verificar que SAP netweaver quedo instalado exitosamente iniciando SAP L
 </p>
 
 * Accedemos a la entrada del sistema donde se puede ingresar con las siguientes credenciales.
-Administrador SAP:
+
 <pre><code>
+Administrador SAP:
  User name :SAP*
  Password: Down1oad
 Developer
