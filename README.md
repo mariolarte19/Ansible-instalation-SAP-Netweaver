@@ -111,7 +111,7 @@ ansible_password=XXXX
   become: yes ......
 </pre></code>
 #### B).Aplicar playbook.
-Desde la consola de comandos nos dirigimos a la carpeta donde esta el playbook sh_install.yml y ejecutamos el siguiente comando `mnsible-playbook sh_install.yml` una vez terminado configura el sistema Operativo (OS) SUSE SLES for SAP Business Applications 15.0 e instala Instala SAP NETWEAVER.😃✔️
+Desde la consola de comandos nos dirigimos a la carpeta donde esta el playbook sh_install.yml y ejecutamos el siguiente comando `mnsible-playbook sh_install.yml` una vez terminado configura el sistema Operativo (OS) SUSE SLES for SAP Business Applications 15.0 e instala SAP NETWEAVER.😃✔️
 #### C). Verificacion.
 Podemos verificar que SAP netweaver quedo instalado exitosamente iniciando SAP Logon el cual podemos descargar el instalador [aqui](https://launchpad.support.sap.com) y verificar de la siguiente manera.
 
@@ -120,16 +120,16 @@ Podemos verificar que SAP netweaver quedo instalado exitosamente iniciando SAP L
 <img width="500" alt="img8" src="SAPNET2.PNG">
 </p>
 * Accedemos a la entrada del sistema donde se puede ingresar con las siguientes credenciales.
-** Administrador SAP:
+Administrador SAP:
  User name :SAP*
  Password: Down1oad
-** Developer
+Developer
  User name :DEVELOPER
  Password: Down1oad
 <p align="center">
 <img width="500" alt="img8" src="SAPNET1.PNG">
 </p>
-
+* Una vez iniciamos sesion verificamos que SAP NETWEAVER esta instalado.😃✔️
 <p align="center">
 <img width="500" alt="img8" src="SAPNET.PNG">
 </p>
