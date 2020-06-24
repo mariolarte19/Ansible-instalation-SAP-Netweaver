@@ -129,13 +129,15 @@ Developer
 <p align="center">
 <img width="500" alt="img8" src="SAPNET1.PNG">
 </p>
+
 * Una vez iniciamos sesion verificamos que SAP NETWEAVER esta instalado.😃✔️
+
 <p align="center">
 <img width="500" alt="img8" src="SAPNET.PNG">
 </p>
 
 
-Para mas informacion sobre gestión del sistema SAP HANA después de la instalación [aqui](https://launchpad.support.sap.com/#/softwarecenter) .
+Para mas informacion sobre gestión del sistema SAP NETWEAVER después de la instalación [aqui](https://launchpad.support.sap.com/#/softwarecenter) .
 ##  Construido con 🛠️
 IBM Cloud, Ansible.
 
