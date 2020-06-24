@@ -116,16 +116,21 @@ Desde la consola de comandos nos dirigimos a la carpeta donde esta el playbook s
 Podemos verificar que SAP netweaver quedo instalado exitosamente iniciando SAP Logon el cual podemos descargar el instalador [aqui](https://launchpad.support.sap.com) y verificar de la siguiente manera.
 
 * Crear una entrada nueva del sistema como se muestra acontinuacion.
+
 <p align="center">
 <img width="500" alt="img8" src="SAPNET2.PNG">
 </p>
+
 * Accedemos a la entrada del sistema donde se puede ingresar con las siguientes credenciales.
 Administrador SAP:
+<pre><code>
  User name :SAP*
  Password: Down1oad
 Developer
  User name :DEVELOPER
  Password: Down1oad
+</pre></code>
+
 <p align="center">
 <img width="500" alt="img8" src="SAPNET1.PNG">
 </p>
